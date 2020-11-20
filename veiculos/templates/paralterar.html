@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <link href="static/crud_veiculo.css" rel="stylesheet" type="text/css">
+   <title>Busca por Placa para Alteração de Veículo</title>
+</head>
+<body>
+   <h1>Busca por placa para alteração de veículo</h1>
+   <hr/>
+   <form action="/formalterar" method="post">
+       <table>
+           <tr>
+               <td>Placa do Veículo:</td>
+               <td><input type="text" name="placa" size="8" maxlength="8" required/></td>
+           </tr>
+       </table>
+       <br/>
+       <input type="submit" value="Alterar Veículo"/>
+   </form>
+   <hr/>
+   <br/>
+   <a href="/"> Voltar ao Menu </a>
+</body>
+</html>

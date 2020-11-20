@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <link href="static/crud_veiculo.css" rel="stylesheet" type="text/css">
+   <title>Parâmetros de Consulta de Veículo</title>
+</head>
+<body>
+   <h1>Parâmetros de consulta de veículos</h1>
+   <hr/>
+   <form action="/consultar" method="post">
+       <table>
+           <tr>
+               <td>Modelo:</td>
+               <td>{{ modelo | safe }}</td>
+           </tr>
+           <tr>
+               <td>Faixa de Valor:</td>
+               <td>
+                   <input type="number" name="ini" size="10" min="0.01" max="99999999.99" step="0.01" value="{{ menor }}"  required/>
+                   <input type="number" name="fim" size="10" min="0.01" max="99999999.99" step="0.01" value="{{ maior }}" required/>
+               </td>
+           </tr>
+       </table>
+       <br/>
+       <input type="submit" value="Consultar Veículo"/>
+   </form>
+   <br/>
+   <hr/>
+   <br/>
+   <a href="/"> Voltar ao Menu </a>
+</body>
+</html>

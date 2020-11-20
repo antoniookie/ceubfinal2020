@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <link href="static/crud_veiculo.css" rel="stylesheet" type="text/css">
+   <title>Formulário para alteração de veículo</title>
+</head>
+<body>
+   <h1>Formulário de alteração de veículos</h1>
+   <hr/>
+   <form action="/alterar" method="post">
+       <table>
+           <tr>
+               <td>Modelo:</td>
+               <td><input type="text" name="modelo" size="30" maxlength="50" required value="{{ modelo }}"/></td>
+           </tr>
+           <tr>
+               <td>Placa:</td>
+               <td><input type="text" name="placa" size="8" maxlength="8" required value="{{ placa }}"/></td>
+           </tr>
+           <tr>
+               <td>Cilindrada:</td>
+               <td><input type="number" name="cilindrada" size="3" min="0.1" max="9.9" step="0.1" required  value="{{ cilindrada }}"/></td>
+           </tr>
+           <tr>
+               <td>Cor:</td>
+               <td>
+                   <SELECT id="selcor" name="cor" required">
+                       <option>Branco</option>
+                       <option>Preto</option>
+                       <option>Prata</option>
+                       <option>Cinza</option>
+                       <option>Amarelo</option>
+                       <option>Vermelho</option>
+                   </SELECT>
+               </td>
+           </tr>
+           <tr>
+               <td>Valor:</td>
+               <td><input type="number" name="valor" size="10" min="0.01" max="99999999.99" step="0.01" required  value="{{ valor }}"/></td>
+           </tr>
+       </table>
+       <br/>
+       <input type="hidden" name="idt" value="{{ idt }}"/>
+       <input type="submit" value="Alterar Veículo"/>
+   </form>
+   <hr/>
+   <br/>
+   <a href="/"> Voltar ao Menu </a>
+   <a href="/paralterar"> Alterar outro veículo </a>
+</body>
+</html>
+
+<script>
+   // Usando javascript para setar a cor
+
+   s=document.getElementById("selcor");
+   s.value="{{ cor }}";
+</script>

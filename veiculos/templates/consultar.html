@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <link href="static/crud_veiculo.css" rel="stylesheet" type="text/css">
+   <title>Resultado da Consulta de Veículo</title>
+</head>
+<body>
+   <h1>Resultado da consulta de veículos</h1>
+   <hr/>
+   <table>
+       <tr>
+           <th>Modelo</th>
+           <th>Placa</th>
+           <th>Cilindrada</th>
+           <th>Cor</th>
+           <th>Valor</th>
+       </tr>
+       {{ modelos | safe }}
+   </table>
+   <br/>
+   <hr/>
+   <br/>
+   <a href="/"> Voltar ao Menu </a> ||
+   <a href="/parconsultar"> Consultar veículos </a>
+</body>
+</html>
